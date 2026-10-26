@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontakt – účetní kancelář Břeclav | Filipkova.cz</title>
-  <meta name="description" content="Daně, účetnictví, mzdy s.r.o., Sovadinova 3544/27, Břeclav. Telefon +420 777 758 939, info@filipkova.cz. Krátký poptávkový formulář a časté dotazy.">
+  <meta name="description" content="Daně, účetnictví, mzdy s.r.o., Sovadinova 3544/27, Břeclav. Telefon +420 777 758 939, info@filipkova.cz. Zavolejte nebo napište, osobní schůzky po domluvě. Časté dotazy.">
   <link rel="canonical" href="https://filipkova.cz/kontakt/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Kontakt – účetní kancelář Břeclav | Filipkova.cz">
-  <meta property="og:description" content="Daně, účetnictví, mzdy s.r.o., Sovadinova 3544/27, Břeclav. Telefon +420 777 758 939, info@filipkova.cz. Krátký poptávkový formulář a časté dotazy.">
+  <meta property="og:description" content="Daně, účetnictví, mzdy s.r.o., Sovadinova 3544/27, Břeclav. Telefon +420 777 758 939, info@filipkova.cz. Zavolejte nebo napište, osobní schůzky po domluvě. Časté dotazy.">
   <meta property="og:url" content="https://filipkova.cz/kontakt/">
   <meta property="og:image" content="https://filipkova.cz/assets/img/foto/foto-13-1600.webp">
   <meta property="og:locale" content="cs_CZ">
@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/epilogue-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/epilogue-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202610261707">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202610261733">
   <meta name="robots" content="noindex, nofollow">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AccountingService", "name": "FILÍPEK & FILÍPKOVÁ – Daně, účetnictví, mzdy s.r.o.", "url": "https://filipkova.cz/", "logo": "https://filipkova.cz/assets/img/logo.png", "image": "https://filipkova.cz/assets/img/foto/foto-13-1600.webp", "telephone": "+420777758939", "email": "info@filipkova.cz", "foundingDate": "1991", "taxID": "CZ26306255", "address": {"@type": "PostalAddress", "streetAddress": "Sovadinova 3544/27", "addressLocality": "Břeclav", "postalCode": "690 02", "addressCountry": "CZ"}, "areaServed": ["CZ", "SK", "HU", "AT"], "founder": {"@type": "Person", "name": "Ing. Ivan Filípek, MBA"}}</script>
 </head>
@@ -55,73 +55,34 @@
     <div>
       <p class="drobky"><a href="/">Úvod</a> / Kontakt</p>
       <h1 class="h-hero">Hledáte účetní kancelář, která bude znát vaši firmu?</h1>
-      <p class="perex">Napište nám několik základních informací. Krátce probereme rozsah agendy a řekneme si, zda a jak vám můžeme pomoci.</p>
+      <p class="perex">Zavolejte nebo napište. Krátce probereme rozsah agendy a řekneme si, zda a jak vám můžeme pomoci.</p>
     </div>
   </div>
 </section>
 
-<section class="sekce bg-zelena" id="poptavka" aria-labelledby="formular-h">
-  <div class="wrap poptavka">
+<section class="sekce bg-zelena" id="poptavka" aria-labelledby="kontakt-h">
+  <div class="wrap kontakt-blok">
     <div>
-      <h2 class="h-3" id="formular-h">Poptávkový formulář</h2>
-      <p class="mt-12">Pole označená hvězdičkou jsou povinná. Ostatní vyplňte, pokud je znáte – pomůže nám to připravit nabídku.</p>
-      <form class="formular mt-32" id="poptavka-form" action="/kontakt.php" method="post">
-        <input type="hidden" name="lang" value="cs">
-        <input type="hidden" name="t" value="">
-        <div class="hp" aria-hidden="true"><label>Web <input type="text" name="web" tabindex="-1" autocomplete="off"></label></div>
-        <p class="hlaska hlaska--chyba pole--cele" id="form-chyba" tabindex="-1" hidden>Zprávu se nepodařilo odeslat. Zkontrolujte prosím povinná pole, nebo nám napište na info@filipkova.cz.</p>
-
-        <div class="pole"><label for="f-jmeno">Jméno a společnost *</label><input type="text" id="f-jmeno" name="jmeno" required autocomplete="name"></div>
-        <div class="pole"><label for="f-ico">IČO <small>(pokud společnost již existuje)</small></label><input type="text" id="f-ico" name="ico" inputmode="numeric" maxlength="10"></div>
-
-        <fieldset class="pole pole--cele">
-          <legend>Co potřebujete</legend>
-          <div class="volby">
-            <label><input type="checkbox" name="potreba[]" value="ucetnictvi"> účetnictví</label>
-            <label><input type="checkbox" name="potreba[]" value="prevzeti"> převzetí účetnictví</label>
-            <label><input type="checkbox" name="potreba[]" value="mzdy"> mzdy</label>
-            <label><input type="checkbox" name="potreba[]" value="spolecnost"> česká společnost</label>
-            <label><input type="checkbox" name="potreba[]" value="sidlo"> sídlo společnosti</label>
-            <label><input type="checkbox" name="potreba[]" value="kancelar"> sdílená kancelář</label>
-          </div>
-        </fieldset>
-
-        <div class="pole"><label for="f-zeme">Země majitele</label>
-          <select id="f-zeme" name="zeme"><option value="">–</option><option>Česko</option><option>Slovensko</option><option>Maďarsko</option><option>Rakousko</option><option>jiná</option></select></div>
-        <div class="pole"><label for="f-dph">DPH</label>
-          <select id="f-dph" name="dph"><option value="">–</option><option>plátce</option><option>neplátce</option><option>registrace se připravuje</option></select></div>
-
-        <div class="pole"><label for="f-zam">Počet zaměstnanců</label><input type="number" id="f-zam" name="zamestnanci" min="0" step="1" inputmode="numeric"></div>
-        <div class="pole"><label for="f-termin">Požadovaný termín <small>(měsíc a rok)</small></label><input type="month" id="f-termin" name="termin"></div>
-
-        <div class="pole pole--cele"><label for="f-rozsah">Rozsah agendy <small>(přibližný počet dokladů a bankovních pohybů měsíčně)</small></label><input type="text" id="f-rozsah" name="rozsah"></div>
-
-        <fieldset class="pole pole--cele">
-          <legend>Zahraniční transakce</legend>
-          <div class="volby">
-            <label><input type="radio" name="zahranicni" value="ano"> ano</label>
-            <label><input type="radio" name="zahranicni" value="ne"> ne</label>
-          </div>
-          <input type="text" name="zahranicni_popis" aria-label="Stručný popis zahraničních transakcí" placeholder="případně stručný popis">
-        </fieldset>
-
-        <div class="pole"><label for="f-email">E-mail *</label><input type="email" id="f-email" name="email" required autocomplete="email"></div>
-        <div class="pole"><label for="f-tel">Telefon</label><input type="tel" id="f-tel" name="telefon" autocomplete="tel"></div>
-        <div class="pole pole--cele"><label for="f-zprava">Stručný popis situace</label><textarea id="f-zprava" name="zprava"></textarea></div>
-
-        <p class="souhlas pole--cele">Údaje použijeme jen k odpovědi na vaši poptávku. Více v <a href="/ochrana-osobnich-udaju/">zásadách ochrany osobních údajů</a>.</p>
-        <div class="pole--cele"><button class="tlacitko" type="submit">Odeslat poptávku <span class="sipka">→</span></button></div>
-      </form>
+      <h2 class="h-3" id="kontakt-h">Zavolejte, nebo napište</h2>
+      <div class="kontakt-velke mt-32">
+        <a href="tel:+420777758939"><span>Telefon</span>+420&nbsp;777&nbsp;758&nbsp;939</a>
+        <a href="mailto:info@filipkova.cz"><span>E-mail</span>info@filipkova.cz</a>
+      </div>
+      <h3 class="kontakt-tip">Do e-mailu se hodí</h3>
+      <ul class="seznam-check">
+        <li>co potřebujete – účetnictví, mzdy, převzetí, sídlo, založení společnosti</li>
+        <li>IČO, pokud společnost už existuje, a zda jste plátci DPH</li>
+        <li>přibližný počet dokladů, zaměstnanců a od kdy chcete začít</li>
+      </ul>
+      <a class="tlacitko mt-32" id="poptavka-mail" href="mailto:info@filipkova.cz?subject=Popt%C3%A1vka%20spolupr%C3%A1ce">Napsat poptávku e-mailem <span class="sipka">→</span></a>
     </div>
-<div>
-        <div class="kontakt-foto">
-          <img src="/assets/img/foto/foto-14-800.webp" alt="Recepce kanceláře s pohovkou" width="800" height="533" loading="lazy">
-        </div>
-        <div class="kontakt-radek"><span>Telefon</span><a href="tel:+420777758939">+420 777 758 939</a></div>
-        <div class="kontakt-radek"><span>E-mail</span><a href="mailto:info@filipkova.cz">info@filipkova.cz</a></div>
+    <figure class="kontakt-budova">
+      <img src="/assets/img/foto/budova-924.webp" srcset="/assets/img/foto/budova-800.webp 800w, /assets/img/foto/budova-924.webp 924w" sizes="(max-width: 820px) 100vw, 560px" alt="Budova kanceláře v Sovadinově ulici v Břeclavi" width="924" height="554">
+      <figcaption>
         <div class="kontakt-radek"><span>Adresa</span><a href="https://mapy.cz/zakladni?q=Sovadinova%203544%2F27%2C%20B%C5%99eclav" target="_blank" rel="noopener">Sovadinova 3544/27, 690 02 Břeclav</a></div>
         <div class="kontakt-radek"><p>Osobní schůzky po předchozí domluvě.</p></div>
-      </div>
+      </figcaption>
+    </figure>
   </div>
   <div class="wrap">
     <div class="kontakt-radek mt-40" style="border-top-color:rgba(10,56,94,.15)">
@@ -182,6 +143,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=202610261707" defer></script>
+  <script src="/assets/js/main.js?v=202610261733" defer></script>
 </body>
 </html>

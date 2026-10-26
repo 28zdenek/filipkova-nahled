@@ -39,3 +39,19 @@
     if (hlaska) { hlaska.hidden = false; hlaska.focus(); }
   }
 })();
+
+// Kontakt: tlačítko e-mailu s předvyplněným předmětem podle ?zajem= a osnovou zprávy
+(function () {
+  var odkaz = document.getElementById("poptavka-mail");
+  if (!odkaz) return;
+  var nazvy = {
+    ucetnictvi: "účetnictví", prevzeti: "převzetí účetnictví", mzdy: "zpracování mezd",
+    spolecnost: "česká společnost", sidlo: "sídlo společnosti", kancelar: "sdílená kancelář"
+  };
+  var zajem = nazvy[new URLSearchParams(location.search).get("zajem")];
+  var predmet = "Poptávka – " + (zajem || "spolupráce");
+  var telo = "Dobrý den,\n\nmám zájem o: " + (zajem || "") +
+    "\nIČO (pokud společnost existuje): \nPlátce DPH: ano / ne\nPřibližný počet dokladů měsíčně: " +
+    "\nPočet zaměstnanců: \nOd kdy: \n\nTelefon: \n";
+  odkaz.href = "mailto:info@filipkova.cz?subject=" + encodeURIComponent(predmet) + "&body=" + encodeURIComponent(telo);
+})();
