@@ -15,6 +15,7 @@
   --modra-karta: #164a73;
   --zelena: #a6c644;
   --svetla-zelena: #f6f9eb;
+  --ramecek: #7f8a6e;
   --linka: #d6dec6;
   --text: #2a4258;
   --tlumeny: #56606e;
@@ -199,14 +200,14 @@ h1, h2, h3, h4 { color: var(--modra); font-weight: 700; text-wrap: balance; }
 .karta-sidlo .tlacitko { margin-top: 32px; }
 .pravy-sloupec { display: flex; flex-direction: column; gap: 24px; }
 .karta-kancelar { background: var(--zelena); color: var(--modra); padding: 40px; }
-.karta-kancelar h3 { font-size: 30px; line-height: 1.15; }
+.karta-kancelar h3 { font-size: 30px; line-height: 1.15; color: var(--modra); }
 .karta-kancelar > p { margin-top: 12px; font-size: 16px; line-height: 1.5; }
 .cenik { margin-top: 22px; }
 .cenik__radek { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; border-top: 1px solid rgba(10,56,94,.45); padding: 16px 0; }
 .cenik__radek > span { font-size: 17px; font-weight: 500; line-height: 1.5; }
 .cenik__radek strong { font-size: 26px; line-height: 1.1; white-space: nowrap; }
-.cenik__radek small { font-size: 14px; color: rgba(10,56,94,.7); margin-left: 8px; }
-.karta-kancelar__pozn { margin-top: 6px; font-size: 14px; line-height: 1.5; color: rgba(10,56,94,.75); }
+.cenik__radek small { font-size: 14px; color: var(--modra); margin-left: 8px; }
+.karta-kancelar__pozn { margin-top: 6px; font-size: 14px; line-height: 1.5; color: var(--modra); }
 .karta-zalozeni { border: 1px solid rgba(255,255,255,.3); padding: 40px; }
 .karta-zalozeni h3 { font-size: 30px; line-height: 1.15; }
 .karta-zalozeni > p { margin-top: 12px; font-size: 16px; line-height: 1.5; color: rgba(255,255,255,.9); }
@@ -337,13 +338,13 @@ h1, h2, h3, h4 { color: var(--modra); font-weight: 700; text-wrap: balance; }
 .pole label small, .pole legend small { font-weight: 400; color: var(--tlumeny); }
 .pole input[type="text"], .pole input[type="email"], .pole input[type="tel"], .pole input[type="number"], .pole input[type="month"], .pole select, .pole textarea {
   font: 400 16px/1.4 "Epilogue", sans-serif; color: var(--text); background: #fff;
-  border: 1px solid #b9c4a8; border-radius: 0; padding: 13px 14px; width: 100%;
+  border: 1px solid var(--ramecek); border-radius: 0; padding: 13px 14px; width: 100%;
 }
 .pole textarea { min-height: 140px; resize: vertical; }
 .pole input:focus, .pole select:focus, .pole textarea:focus { outline: 2px solid var(--modra-logo); outline-offset: 0; border-color: var(--modra-logo); }
 fieldset.pole { border: 0; margin: 0; padding: 0; min-width: 0; }
 .volby { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-.volby label { font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid #b9c4a8; background: #fff; padding: 10px 14px; cursor: pointer; }
+.volby label { font-weight: 500; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--ramecek); background: #fff; padding: 10px 14px; cursor: pointer; }
 .volby input { accent-color: var(--modra); margin: 0; }
 .volby label:has(input:checked) { border-color: var(--modra); background: #eef3f8; }
 .formular .souhlas { font-size: 14px; color: var(--tlumeny); }
