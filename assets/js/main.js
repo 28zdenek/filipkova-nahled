@@ -48,11 +48,18 @@
     ucetnictvi: "účetnictví", prevzeti: "převzetí účetnictví", mzdy: "zpracování mezd",
     spolecnost: "česká společnost", sidlo: "sídlo společnosti", kancelar: "sdílená kancelář"
   };
-  var zajem = nazvy[new URLSearchParams(location.search).get("zajem")];
+  var klic = new URLSearchParams(location.search).get("zajem");
+  var zajem = nazvy[klic];
   var predmet = "Poptávka – " + (zajem || "spolupráce");
   var telo = "Dobrý den,\n\nmám zájem o: " + (zajem || "") +
     "\nIČO (pokud společnost existuje): \nPlátce DPH: ano / ne\nPřibližný počet dokladů měsíčně: " +
     "\nPočet zaměstnanců: \nOd kdy: \n\nTelefon: \n";
+  if (klic === "sidlo") {
+    telo = "Dobrý den,\n\nmám zájem o sídlo společnosti v Břeclavi.\n\n" +
+      "Název firmy: \nIČO (pokud firmu teprve zakládáme, stačí napsat): \nKontakt (telefon): \nSídlo potřebujeme od: \n";
+    var obecny = document.getElementById("tip-obecny"), sidlo = document.getElementById("tip-sidlo");
+    if (obecny && sidlo) { obecny.hidden = true; sidlo.hidden = false; }
+  }
   odkaz.href = "mailto:info@filipkova.cz?subject=" + encodeURIComponent(predmet) + "&body=" + encodeURIComponent(telo);
   var gmail = document.getElementById("poptavka-gmail");
   if (gmail) gmail.href = "https://mail.google.com/mail/?view=cm&to=info@filipkova.cz&su=" + encodeURIComponent(predmet) + "&body=" + encodeURIComponent(telo);

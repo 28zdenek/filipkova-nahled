@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preload" href="/assets/fonts/epilogue-latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/epilogue-latin-400.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/css/style.css?v=202611031122">
+  <link rel="stylesheet" href="/assets/css/style.css?v=202611032052">
   <meta name="robots" content="noindex, nofollow">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "AccountingService", "name": "FILÍPEK & FILÍPKOVÁ – Daně, účetnictví, mzdy s.r.o.", "url": "https://filipkova.cz/", "logo": "https://filipkova.cz/assets/img/logo.png", "image": "https://filipkova.cz/assets/img/foto/foto-13-1600.webp", "telephone": "+420777758939", "email": "info@filipkova.cz", "foundingDate": "1991", "taxID": "CZ26306255", "address": {"@type": "PostalAddress", "streetAddress": "Sovadinova 3544/27", "addressLocality": "Břeclav", "postalCode": "690 02", "addressCountry": "CZ"}, "areaServed": ["CZ", "SK", "HU", "AT"], "founder": {"@type": "Person", "name": "Ing. Ivan Filípek, MBA"}}</script>
 </head>
@@ -69,10 +69,15 @@
         <a href="mailto:info@filipkova.cz"><span>E-mail</span>info@filipkova.cz</a>
       </div>
       <h3 class="kontakt-tip">Do e-mailu se hodí</h3>
-      <ul class="seznam-check">
+      <ul class="seznam-check" id="tip-obecny">
         <li>co potřebujete – účetnictví, mzdy, převzetí, sídlo, založení společnosti</li>
         <li>IČO, pokud společnost už existuje, a zda jste plátci DPH</li>
         <li>přibližný počet dokladů, zaměstnanců a od kdy chcete začít</li>
+      </ul>
+      <ul class="seznam-check" id="tip-sidlo" hidden>
+        <li>název firmy a IČO – pokud firmu teprve zakládáte, stačí to napsat</li>
+        <li>kontakt na vás</li>
+        <li>od kdy sídlo potřebujete</li>
       </ul>
       <a class="tlacitko mt-32" id="poptavka-mail" href="mailto:info@filipkova.cz?subject=Popt%C3%A1vka%20spolupr%C3%A1ce">Napsat poptávku e-mailem <span class="sipka">→</span></a>
       <p class="poptavka-zaloha">Neotevřel se vám e-mail? <a id="poptavka-gmail" href="https://mail.google.com/mail/?view=cm&amp;to=info@filipkova.cz" target="_blank" rel="noopener">Napsat přes Gmail</a> nebo <button type="button" class="odkaz-tlacitko" id="kopirovat-email" data-email="info@filipkova.cz">zkopírovat adresu</button><span class="poptavka-zaloha__ok" id="kopirovat-ok" role="status" hidden> – zkopírováno</span></p>
@@ -157,6 +162,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js?v=202611031122" defer></script>
+  <script src="/assets/js/main.js?v=202611032052" defer></script>
 </body>
 </html>
