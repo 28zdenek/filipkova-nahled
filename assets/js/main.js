@@ -54,4 +54,15 @@
     "\nIČO (pokud společnost existuje): \nPlátce DPH: ano / ne\nPřibližný počet dokladů měsíčně: " +
     "\nPočet zaměstnanců: \nOd kdy: \n\nTelefon: \n";
   odkaz.href = "mailto:info@filipkova.cz?subject=" + encodeURIComponent(predmet) + "&body=" + encodeURIComponent(telo);
+  var gmail = document.getElementById("poptavka-gmail");
+  if (gmail) gmail.href = "https://mail.google.com/mail/?view=cm&to=info@filipkova.cz&su=" + encodeURIComponent(predmet) + "&body=" + encodeURIComponent(telo);
+  var kopirovat = document.getElementById("kopirovat-email");
+  var ok = document.getElementById("kopirovat-ok");
+  if (kopirovat && navigator.clipboard) {
+    kopirovat.addEventListener("click", function () {
+      navigator.clipboard.writeText(kopirovat.getAttribute("data-email")).then(function () { if (ok) ok.hidden = false; });
+    });
+  } else if (kopirovat) {
+    kopirovat.hidden = true;
+  }
 })();
