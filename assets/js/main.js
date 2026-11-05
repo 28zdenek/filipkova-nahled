@@ -1,3 +1,16 @@
+// Hlavička: po odscrolování změní barvu (zůstává nahoře díky position: sticky)
+(function () {
+  var h = document.querySelector(".hlavicka");
+  if (!h) return;
+  var pevna = false;
+  function zkontroluj() {
+    var ted = window.scrollY > 24;
+    if (ted !== pevna) { pevna = ted; h.classList.toggle("hlavicka--pevna", ted); }
+  }
+  window.addEventListener("scroll", zkontroluj, { passive: true });
+  zkontroluj();
+})();
+
 // Mobilní menu
 (function () {
   var btn = document.querySelector(".burger");

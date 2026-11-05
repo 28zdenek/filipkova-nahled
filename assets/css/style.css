@@ -27,7 +27,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 96px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body {
   margin: 0;
@@ -90,7 +90,8 @@ h1, h2, h3, h4 { color: var(--modra); font-weight: 700; text-wrap: balance; }
 .zvyrazneni { border-left: 4px solid var(--zelena); padding-left: 24px; }
 
 /* ---------- Hlavička ---------- */
-.hlavicka { position: relative; z-index: 20; background: #fff; }
+.hlavicka { position: sticky; top: 0; z-index: 20; background: #fff; transition: background-color .25s ease, box-shadow .25s ease; }
+.hlavicka__in { transition: height .25s ease; }
 .hlavicka__in { height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; color: var(--modra); flex-shrink: 0; }
 .logo img { width: 54px; height: 54px; }
@@ -102,6 +103,19 @@ h1, h2, h3, h4 { color: var(--modra); font-weight: 700; text-wrap: balance; }
 .hlavicka__kontakt a { text-decoration: none; color: var(--modra); white-space: nowrap; }
 .hlavicka__kontakt a:hover { text-decoration: underline; }
 .burger { display: none; }
+
+/* Po odscrolování: hlavička zůstává nahoře, tmavě modrá jako patička */
+.hlavicka--pevna { background: var(--modra); box-shadow: 0 6px 20px rgba(10,56,94,.18); }
+.hlavicka--pevna .hlavicka__in { height: 68px; }
+.hlavicka--pevna .logo, .hlavicka--pevna .burger { color: #fff; }
+.hlavicka--pevna .logo img { width: 44px; height: 44px; }
+.logo img { transition: width .25s ease, height .25s ease; }
+@media (min-width: 1101px) {
+  .hlavicka--pevna .menu a, .hlavicka--pevna .hlavicka__kontakt a { color: #fff; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hlavicka, .hlavicka__in, .logo img { transition: none; }
+}
 
 @media (max-width: 1260px) {
   .hlavicka__kontakt a[href^="mailto"] { display: none; }
@@ -312,6 +326,7 @@ h1, h2, h3, h4 { color: var(--modra); font-weight: 700; text-wrap: balance; }
 .paticka a:hover { text-decoration: underline; }
 .paticka__menu li { line-height: 1.6; }
 .paticka__rok { font-size: 22px; font-weight: 700; line-height: 1.02; letter-spacing: -0.015em; }
+.paticka__autor a { text-decoration: underline; text-underline-offset: 3px; }
 .paticka__spodek { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 24px; border-top: 1px solid #fff; padding-top: 20px; margin-top: 56px; font-size: 13px; }
 
 /* ---------- Podstránky ---------- */
