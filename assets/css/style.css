@@ -108,13 +108,13 @@ h1, h2, h3, h4 { color: var(--modra); font-weight: 700; text-wrap: balance; }
 .hlavicka--pevna { background: var(--modra); box-shadow: 0 6px 20px rgba(10,56,94,.18); }
 .hlavicka--pevna .hlavicka__in { height: 68px; }
 .hlavicka--pevna .logo, .hlavicka--pevna .burger { color: #fff; }
-.hlavicka--pevna .logo img { width: 44px; height: 44px; }
-.logo img { transition: width .25s ease, height .25s ease; }
+.hlavicka--pevna .logo { gap: 0; }
+.hlavicka--pevna .logo img { display: none; }  /* v modrém menu bez kulatého loga, jen bílý nápis */
 @media (min-width: 1101px) {
   .hlavicka--pevna .menu a, .hlavicka--pevna .hlavicka__kontakt a { color: #fff; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hlavicka, .hlavicka__in, .logo img { transition: none; }
+  .hlavicka, .hlavicka__in { transition: none; }
 }
 
 @media (max-width: 1260px) {
